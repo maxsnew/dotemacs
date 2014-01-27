@@ -3,6 +3,9 @@
 (cask-initialize)
 (require 'pallet)
 
+;; Kustom stuff
+(add-to-list 'load-path "~/.emacs.d/custom")
+
 ;; Kustom Keybindings
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-x p") 'previous-multiframe-window)

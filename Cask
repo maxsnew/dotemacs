@@ -10,6 +10,7 @@
 (depends-on "f")
 (depends-on "flycheck")
 (depends-on "flycheck-haskell")
+(depends-on "geiser")
 (depends-on "haskell-mode")
 (depends-on "magit")
 (depends-on "pallet")
