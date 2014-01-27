@@ -17,8 +17,8 @@
 (global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; Kolors
-(require 'color-theme)
-(color-theme-sanityinc-tomorrow-eighties)
+;; (require 'color-theme)
+;; (color-theme-sanityinc-tomorrow-eighties)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Language-specific Config/Hooks;;
@@ -26,12 +26,12 @@
 (add-hook 'text-mode-hook 'auto-fill-mode)
 
 ;; Coq
-;; (load-file "/home/mnew/code/coq/ProofGeneral/generic/proof-site.el")
+(load-file "/home/mnew/code/coq/ProofGeneral/generic/proof-site.el")
 
 ;; Lisp hooks
 (require 'rainbow-delimiters)
 ;; TODO: figure out if you can get quack with Cask
-;;(require 'quack)
+(require 'quack)
 (setq lisp-hook
       (lambda ()
 	(paredit-mode +1)
@@ -49,10 +49,6 @@
   '(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup))
 (add-hook 'haskell-mode-hook 'haskell-indentation-mode)
 (add-hook 'haskell-mode-hook 'flycheck-mode)
-
-;; Elm
-;; TODO: unset flycheck when doing elm stuff
-(add-to-list 'auto-mode-alist '("\\.elm\\'" . haskell-mode))
 
 ;; Custom set variables
 (custom-set-variables
